@@ -3,7 +3,7 @@ html,body{
     width: 100%;
 }
 body{
-    background-color: #7bb3fd;
+    background-color: #152e4e;
 }
 a{
     text-decoration: none;
@@ -15,12 +15,16 @@ a{
     margin-top: 15px;
 }
 .profile h2{
+    margin-top: 5px;
     text-align: center;
     font-size: 24px;
+    color:rgb(124, 207, 218)
 }
 .profile p{
     font-size: 18px;
     text-align: center;
+    color:rgb(124, 207, 218)
+
 }
 .medias {
     margin-top: 10px;
@@ -31,7 +35,7 @@ a{
 .medias button{
     width: 150px;
     height: 40px;
-    color:black;
+    color:rgb(25, 158, 211);
     background-color: #80c4b8;
     transition: all 0.3s;
     border: 1px solid rgb(107, 130, 160);
