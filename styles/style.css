@@ -1,8 +1,12 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
 body{
     background-color: #7bb3fd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+a{
+    text-decoration: none;
 }
 .profile{
     display: flex;
@@ -18,7 +22,6 @@ body{
     font-size: 18px;
     text-align: center;
 }
-
 .medias {
     margin-top: 10px;
     width: 300px;
@@ -42,11 +45,88 @@ body{
     margin-top: 5px;
     color: black;
 }
+.container-projects{
+    width: 100%;
+}
 .projects{
-    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 50px;
     font-size: 24px;
+    width: 100%;
+}
+.project{
+    margin-bottom: 10px;
+    display: flex;
+    height: 600px;
+    border-bottom: 5px inset rgb(39, 72, 77);
+    border-top: 5px outset rgb(44, 146, 160);
+
+}
+
+.project .description{
+    color:#a9c1e0;
+    background-color: rgb(82, 93, 128);
+    width: 300px;
+    min-width: 300px;
+    border-right: 5px inset rgb(44, 146, 160);
+}
+
+.description-buttons button{
+    width: 140px;
+    height: 40px;
+    background-color: #47635e;
+    color:#afe0dc;
+    transition: all 0.3s;
+    margin-top: 5px;
+}
+.description-buttons button:hover{
+    cursor: pointer;
+    filter: brightness(140%);
+}
+.parallax-1{
+    background-image: url('../assets/MyWallet\ demo.png');
+    min-width: 72%;
+    background-attachment: fixed;
+    background-size: 72% 100%;
+    background-position: bottom 0px left 280px;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+}
+.parallax-2{
+    background-image: url('../assets/TrackIt\ Demo.png');
+    min-width: 72%;
+    background-attachment: fixed;
+    background-size: 72% 100%;
+    background-position: bottom 0 left 280px;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+}
+.parallax-3{
+    background-image: url('../assets/Cineflex\ Demo.png');
+    min-width: 72%;
+    background-attachment: fixed;
+    background-size: 72% 100%;
+    background-position: bottom 0 left 280px;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+}
+.parallax-4{
+    background-image: url('../assets/JogoForca\ Demo.png');
+    min-width: 72%;
+    background-attachment: fixed;
+    background-size: 72% 100%;
+    background-position: bottom 0 left 280px;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+}
+.parallax-5{
+    background-image: url('../assets/Ataques\ DNS\ Demo.png');
+    min-width: 72%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: bottom 0 left 280px;
+    background-repeat: no-repeat;
+    opacity: 0.65;
 }
