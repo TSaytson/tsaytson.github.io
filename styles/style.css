@@ -15,12 +15,14 @@ a{
     margin-top: 15px;
 }
 .profile h2{
+    font-family: 'Passion One';
     margin-top: 5px;
     text-align: center;
     font-size: 24px;
     color:rgb(124, 207, 218)
 }
 .profile p{
+    font-family: 'Passion One';
     font-size: 18px;
     text-align: center;
     color:rgb(124, 207, 218)
@@ -64,17 +66,25 @@ a{
     margin-bottom: 50px;
     display: flex;
     height: 600px;
-
 }
-
 .project .description{
     color:#a9c1e0;
     background-color: rgb(82, 93, 128);
     width: 300px;
     min-width: 300px;
     border-right: 5px inset rgb(44, 146, 160);
+    font-family: 'Oswald';
+    font-size: 28px;
 }
-
+.project .description p{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.description-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .description-buttons button{
     width: 140px;
     height: 40px;
