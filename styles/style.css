@@ -26,17 +26,17 @@ body{
     justify-content: space-between;
 }
 .medias button{
-    width: 120px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     color:black;
     background-color: #80c4b8;
     transition: all 0.3s;
-    border: 1px solid;
+    border: 1px solid rgb(107, 130, 160);
 }
 .medias button:hover{
     cursor: pointer;
     filter:brightness(140%);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .medias a{
     margin-top: 5px;
