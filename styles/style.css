@@ -61,11 +61,9 @@ a{
     width: 100%;
 }
 .project{
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     display: flex;
     height: 600px;
-    border-bottom: 5px inset rgb(39, 72, 77);
-    border-top: 5px outset rgb(44, 146, 160);
 
 }
 
