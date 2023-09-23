@@ -1,258 +1,407 @@
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+}
 
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/coolvetica\ rg.otf');
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('/assets/fonts/Louis\ George\ Cafe.ttf');
 }
 
 body {
-    background-color: #152e4e;
+  background-color: #152e4e;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+@keyframes move-right {
+  0% {
+    left: -30px;
+    opacity: 0%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #12151D;
+  animation: fade-in 3s;
+  z-index: 1;
+}
+
+header img {
+  height: 90px;
+  width: 90px;
+  margin-left: 30px;
+}
+
+header div ul {
+  margin-right: 30px;
+  display: flex;
+}
+
+header li {
+  font-family: 'Coolvetica';
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+  transition: 0.4s all;
+  letter-spacing: 2.4px;
+}
+
+header li:hover {
+  text-decoration: underline;
+  text-decoration-color: #39D6AF;
+  transform: scale(1.1);
+}
+
+.home {
+  margin-top: 100px;
+  background-color: #030710;
+  height: 420px;
+  animation: fade-in 3s;
+}
+
+.home>div {
+  height: 310px;
+  margin-left: 30px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home div section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 3px solid #F8FBFA;
+  height: 180px;
+}
+
+.home div section h2 {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Comfortaa';
+  font-size: 32px;
+  margin-left: 20px;
+  position: relative;
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+.home div section p {
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Louis George Cafe';
+  font-size: 21px;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+.home img {
+  background-color: white;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin-right: 30px;
+  filter: saturate(0%) brightness(110%)
+}
+
+.home button {
+  height: 70px;
+  background-color: #39D6AF;
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 10px 8px 6px rgba(57, 214, 175, 0.25);
+  font-size: 26px;
+  font-family: 'Louis George Cafe';
+  letter-spacing: 3.4px;
+  color: #030710;
+  transition: 0.4s all;
+  margin-left: 30px;
+  cursor: pointer;
+  margin-top: -30px;
+  border: none;
+}
+
+.home button:hover {
+  transform: scale(1.1);
+  filter: brightness(120%);
 }
 
 .mobile {
-    display: none;
+  display: none;
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .profile h2 {
-    font-family: 'Oswald';
-    margin-top: 5px;
-    text-align: center;
-    font-size: 24px;
-    color: rgb(124, 207, 218)
+  font-family: 'Oswald';
+  margin-top: 5px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(124, 207, 218)
 }
 
 .profile p {
-    margin-top: 5px;
-    font-family: 'Oswald';
-    font-size: 18px;
-    text-align: center;
-    color: rgb(124, 207, 218)
+  margin-top: 5px;
+  font-family: 'Oswald';
+  font-size: 18px;
+  text-align: center;
+  color: rgb(124, 207, 218)
 }
 
 .medias {
-    margin-top: 10px;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .medias button {
-    width: 150px;
-    height: 40px;
-    color: rgb(25, 158, 211);
-    background-color: #80c4b8;
-    transition: all 0.3s;
-    border: 1px solid rgb(107, 130, 160);
+  width: 150px;
+  height: 40px;
+  color: rgb(25, 158, 211);
+  background-color: #80c4b8;
+  transition: all 0.3s;
+  border: 1px solid rgb(107, 130, 160);
 }
 
 .medias button:hover {
-    cursor: pointer;
-    filter: brightness(140%);
-    transform: scale(1.05);
+  cursor: pointer;
+  filter: brightness(140%);
+  transform: scale(1.05);
 }
 
 .medias a {
-    margin-top: 5px;
-    color: black;
+  margin-top: 5px;
+  color: black;
 }
 
 .container-projects {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    font-size: 24px;
-    width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 24px;
+  width: 90%;
 }
 
 .project {
-    width: 700px;
-    display: flex;
-    margin-bottom: 50px;
-    height: 600px;
-    border-top: 5px outset rgb(44, 146, 160);
-    box-shadow: 1px 1px 50px 20px rgba(255, 255, 255, 0.4);
+  width: 700px;
+  display: flex;
+  margin-bottom: 50px;
+  height: 600px;
+  border-top: 5px outset rgb(44, 146, 160);
+  box-shadow: 1px 1px 50px 20px rgba(255, 255, 255, 0.4);
 }
 
 .project .description {
+  color: #a9c1e0;
+  background-color: rgb(82, 93, 128);
+  width: 300px;
+  min-width: 300px;
+  border-right: 5px inset rgb(44, 146, 160);
+  font-family: 'Oswald';
+  font-size: 28px;
+}
+
+.project .description p {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.description-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.description-buttons button {
+  width: 140px;
+  height: 40px;
+  background-color: #47635e;
+  color: #afe0dc;
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+
+.description-buttons button:hover {
+  cursor: pointer;
+  filter: brightness(140%);
+}
+
+.parallax-1 {
+  min-width: 395px;
+  background-image: url('/assets/images/MyWallet\ demo.png');
+  background-attachment: fixed;
+  background-size: 40% 100%;
+  background-position: bottom 0 right 30%;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+.parallax-2 {
+  background-image: url('/assets/images/TrackIt\ Demo.png');
+  min-width: 395px;
+  background-attachment: fixed;
+  background-size: 72% 100%;
+  background-position: bottom 0 left 280px;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+.parallax-3 {
+  background-image: url('/assets/images/Cineflex\ Demo.png');
+  min-width: 395px;
+  background-attachment: fixed;
+  background-size: 72% 100%;
+  background-position: bottom 0 left 280px;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+.parallax-4 {
+  background-image: url('/assets/images/JogoForca\ Demo.png');
+  min-width: 395px;
+  background-attachment: fixed;
+  background-size: 72% 100%;
+  background-position: bottom 0 left 280px;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+.parallax-5 {
+  background-image: url('/assets/images/Ataques\ DNS\ Demo.png');
+  min-width: 395px;
+  background-attachment: fixed;
+  background-size: 72% 100%;
+  background-position: bottom 0 left 280px;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+@media (max-width: 1200px) {
+  .project {
+    width: 605px;
+    height: 400px;
+  }
+
+  .parallax-1 {
+    min-width: 300px;
+    background-size: 72% 100%;
+    background-position: top 0 right 0;
+  }
+
+  .parallax-2 {
+    background-size: 72% 100%;
+    background-position: top 0 right 0;
+    min-width: 300px;
+  }
+
+  .parallax-3 {
+    background-size: 72% 100%;
+    background-position: top 0 right 0;
+    min-width: 300px;
+  }
+
+  .parallax-4 {
+    background-size: 72% 100%;
+    background-position: top 0 right 0;
+    min-width: 300px;
+  }
+
+  .parallax-5 {
+    background-size: 72% 100%;
+    background-position: top 0 right 0;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-projects {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .description {
     color: #a9c1e0;
     background-color: rgb(82, 93, 128);
     width: 300px;
     min-width: 300px;
-    border-right: 5px inset rgb(44, 146, 160);
     font-family: 'Oswald';
     font-size: 28px;
-}
+    text-align: center;
+  }
 
-.project .description p {
-    margin-top: 5px;
-    margin-left: 5px;
-}
+  .description-buttons {
+    margin-top: 10px;
+  }
 
-.description-buttons {
+  .project-mobile {
+    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-}
-
-.description-buttons button {
-    width: 140px;
-    height: 40px;
-    background-color: #47635e;
-    color: #afe0dc;
-    transition: all 0.3s;
-    margin-top: 5px;
-}
-
-.description-buttons button:hover {
-    cursor: pointer;
-    filter: brightness(140%);
-}
-
-.parallax-1 {
-    min-width: 395px;
-    background-image: url('../assets/MyWallet\ demo.png');
-    background-attachment: fixed;
-    background-size: 40% 100%;
-    background-position: bottom 0 right 30%;
-    background-repeat: no-repeat;
-    opacity: 0.65;
-}
-
-.parallax-2 {
-    background-image: url('../assets/TrackIt\ Demo.png');
-    min-width: 395px;
-    background-attachment: fixed;
-    background-size: 72% 100%;
-    background-position: bottom 0 left 280px;
-    background-repeat: no-repeat;
-    opacity: 0.65;
-}
-
-.parallax-3 {
-    background-image: url('../assets/Cineflex\ Demo.png');
-    min-width: 395px;
-    background-attachment: fixed;
-    background-size: 72% 100%;
-    background-position: bottom 0 left 280px;
-    background-repeat: no-repeat;
-    opacity: 0.65;
-}
-
-.parallax-4 {
-    background-image: url('../assets/JogoForca\ Demo.png');
-    min-width: 395px;
-    background-attachment: fixed;
-    background-size: 72% 100%;
-    background-position: bottom 0 left 280px;
-    background-repeat: no-repeat;
-    opacity: 0.65;
-}
-
-.parallax-5 {
-    background-image: url('../assets/Ataques\ DNS\ Demo.png');
-    min-width: 395px;
-    background-attachment: fixed;
-    background-size: 72% 100%;
-    background-position: bottom 0 left 280px;
-    background-repeat: no-repeat;
-    opacity: 0.65;
-}
-
-@media (max-width: 1200px) {
-    .project {
-        width: 605px;
-        height: 400px;
-    }
-
-    .parallax-1 {
-        min-width: 300px;
-        background-size: 72% 100%;
-        background-position: top 0 right 0;
-    }
-
-    .parallax-2 {
-        background-size: 72% 100%;
-        background-position: top 0 right 0;
-        min-width: 300px;
-    }
-
-    .parallax-3 {
-        background-size: 72% 100%;
-        background-position: top 0 right 0;
-        min-width: 300px;
-    }
-
-    .parallax-4 {
-        background-size: 72% 100%;
-        background-position: top 0 right 0;
-        min-width: 300px;
-    }
-
-    .parallax-5 {
-        background-size: 72% 100%;
-        background-position: top 0 right 0;
-        min-width: 300px;
-    }
-}
-
-@media (max-width: 640px) {
-    .container-projects {
-        display: none;
-    }
-
-    .mobile {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project {
-        width: 100%;
-    }
-
-    .description {
-        color: #a9c1e0;
-        background-color: rgb(82, 93, 128);
-        width: 300px;
-        min-width: 300px;
-        font-family: 'Oswald';
-        font-size: 28px;
-        text-align: center;
-    }
-    .description-buttons{
-        margin-top: 10px;
-    }
-
-    .project-mobile {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: rgb(82, 93, 128);
-        border: 5px outset rgb(44, 146, 160);
-        box-shadow: 2px 2px 50px 30px rgba(255, 255, 255, 0.3);
-        width: 80%;
-        height: 240px;
-        min-width: 300px;
-    }
+    background-color: rgb(82, 93, 128);
+    border: 5px outset rgb(44, 146, 160);
+    box-shadow: 2px 2px 50px 30px rgba(255, 255, 255, 0.3);
+    width: 80%;
+    height: 240px;
+    min-width: 300px;
+  }
 }
